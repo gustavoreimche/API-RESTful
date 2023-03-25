@@ -6,7 +6,7 @@
 ## Dados do Curso
 ![Badge em Status](https://img.shields.io/badge/STATUS-CURSANDO-yellow?style=for-the-badge)
 
-* Início :  <b>15/01/2023</b> - Témino : <b>12/01/2024</b>
+* Início :  <b>15/01/2023</b> - Término : <b>12/01/2024</b>
 * Curso : <b>Pós-Graduação em Desenvolvimento Full Stack</b>
 * Instituição : <b>Faculdade Descomplica</b>
 * Link do Curso : [Pós-Graduação em Desenvolvimento Full Stack](https://descomplica.com.br/pos-graduacao/tecnologia/pos-online-em-desenvolvimento-full-stack/)
