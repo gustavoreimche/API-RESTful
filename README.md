@@ -2,17 +2,11 @@
   <img src="https://user-images.githubusercontent.com/125761885/220490685-9cb32ffc-55fa-452a-8d45-667650b13a49.png" >
 </div>
 
-# Pós-Graduação em Desenvolvimento Full Stack
-<div align="center">
-  <img src="https://img.shields.io/github/languages/count/brunoeduardoferreiradev/pos-graduacao-em-desenvolvimento-full-stack?style=for-the-badge" >
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/brunoeduardoferreiradev/pos-graduacao-em-desenvolvimento-full-stack?style=for-the-badge">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/brunoeduardoferreiradev/pos-graduacao-em-desenvolvimento-full-stack?style=for-the-badge">
-</div>
 
 ## Dados do Curso
 ![Badge em Status](https://img.shields.io/badge/STATUS-CURSANDO-yellow?style=for-the-badge)
 
-* Início :  <b>21/02/2023</b> - Témino : <b>21/02/2024</b>
+* Início :  <b>15/01/2023</b> - Témino : <b>12/01/2024</b>
 * Curso : <b>Pós-Graduação em Desenvolvimento Full Stack</b>
 * Instituição : <b>Faculdade Descomplica</b>
 * Link do Curso : [Pós-Graduação em Desenvolvimento Full Stack](https://descomplica.com.br/pos-graduacao/tecnologia/pos-online-em-desenvolvimento-full-stack/)
@@ -39,13 +33,13 @@
  
 ## Ementa
 * 📁- Módulo 01
-  * - Lógica de Programação com Java - 30h - Finalizado <b>15/03/2023</b>
-  * - Practitioner Front-End - 30h → Html, CSS, Bootstrap
+  * - Lógica de Programação com Java - 30h → Java
+  * - Practitioner Front-End - 30h → Html, CSS, Bootstrap 
   * - Interface de Software - 30h → Design Thinking, UX e Metodologias Ágeis
   * - Intermediary Front-End - 30h → Javascript, Git, Node.js
 * 📁- Módulo 02
-  * - Advanced Front-end - 30h
-  * - Strategies BackEnd - 30h
+  * - Advanced Front-end - 30h → Angular 9
+  * - Strategies BackEnd - 30h → Java Spring boot
   * - Essencial DataBase - 30h → Fundamentos de Banco de Dados
   * - Refactoring - 30h
 * 📁- Módulo 03
