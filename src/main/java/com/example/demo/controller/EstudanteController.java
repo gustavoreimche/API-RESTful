@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Estudante;
@@ -33,6 +34,13 @@ public class EstudanteController {
     public List<Estudante> buscarEstudantes () {
         return estudanteService.buscarEstudantes();
     }
+
+    @GetMapping("/")
+    public List<Estudante> buscarEstudantePeloNome (@RequestParam String nome) {
+        return estudanteService.buscarEstudantePorNome(nome);
+    }
+
+
 
     @PostMapping
     public ResponseEntity<Estudante> cadastrarEstudante (@RequestBody Estudante estudante) {

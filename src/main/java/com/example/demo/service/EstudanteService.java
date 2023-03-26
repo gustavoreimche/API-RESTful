@@ -1,9 +1,6 @@
 package com.example.demo.service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 import org.springframework.http.HttpStatus;
@@ -26,6 +23,12 @@ public class EstudanteService {
             return ResponseEntity.status(HttpStatus.OK).body(estudanteRepository.findById(id).get());
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+    }
+
+    public List<Estudante> buscarEstudantePorNome (String nome) {
+        // return estudanteRepository.findByNome(nome);
+        return estudanteRepository.findByNomeStartsWith(nome);
+        
     }
 
     public List<Estudante> buscarEstudantes () {
