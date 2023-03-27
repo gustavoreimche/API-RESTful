@@ -2,9 +2,12 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.boot.origin.OriginProvider;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,31 +34,36 @@ public class EstudanteController {
     public ResponseEntity<Estudante> buscarEstudantePorId(@PathVariable Long id) {
         return estudanteService.buscarEstudantePorId(id);
     }
-          
+
+    @CrossOrigin(origins = "*")
     @GetMapping
-    public Page<Estudante> buscarEstudantes (@RequestParam(defaultValue = "0") Integer pagina, @RequestParam(defaultValue = "5") Integer itensPorPagina) {
-        return estudanteService.buscarEstudantes(PageRequest.of(pagina, itensPorPagina));
+    public ResponseEntity<List<Estudante>> buscarEstudantes() {
+        return estudanteService.buscarEstudantes();
+    }
+
+    @GetMapping("/page/")
+    public Page<Estudante> buscarEstudantesPage(@RequestParam(defaultValue = "0") Integer pagina,
+            @RequestParam(defaultValue = "5") Integer itensPorPagina) {
+        return estudanteService.buscarEstudantesPage(PageRequest.of(pagina, itensPorPagina));
     }
 
     @GetMapping("/")
-    public List<Estudante> buscarEstudantePeloNome (@RequestParam String nome) {
+    public List<Estudante> buscarEstudantePeloNome(@RequestParam String nome) {
         return estudanteService.buscarEstudantePorNome(nome);
     }
 
-
-
     @PostMapping
-    public ResponseEntity<Estudante> cadastrarEstudante (@RequestBody Estudante estudante) {
+    public ResponseEntity<Estudante> cadastrarEstudante(@RequestBody Estudante estudante) {
         return estudanteService.cadastrarEstudante(estudante);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Estudante> atualizarEstudante (@PathVariable Long id, @RequestBody Estudante estudante) {
+    public ResponseEntity<Estudante> atualizarEstudante(@PathVariable Long id, @RequestBody Estudante estudante) {
         return estudanteService.atualizarEstudante(id, estudante);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> removerEstudante (@PathVariable Long id) {
+    public ResponseEntity<String> removerEstudante(@PathVariable Long id) {
         return estudanteService.removerEstudante(id);
     }
 

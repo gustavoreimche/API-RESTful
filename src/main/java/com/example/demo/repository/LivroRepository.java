@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.entity.Estudante;
+import com.example.demo.entity.Livro;
 
 @Repository
-public interface EstudanteRepository extends JpaRepository<Estudante, Long> {
-    List<Estudante> findByNomeStartsWithIgnoreCase(String nome);
+public interface LivroRepository extends JpaRepository<Livro, Long> {
+    Livro findByNomeLivroStartsWithIgnoreCase(String nomeLivro);
 }
