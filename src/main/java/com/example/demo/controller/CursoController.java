@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -27,8 +29,8 @@ public class CursoController {
     private CursoRepository cursoRepository;
 
     @GetMapping()
-    public Page<Curso> getAll(@RequestParam(defaultValue = "0") Integer pagina, @RequestParam(defaultValue = "5") Integer itensPorPagina) {
-        return cursoRepository.findAll(PageRequest.of(pagina, itensPorPagina));
+    public ResponseEntity<List<Curso>> getAll() {
+        return ResponseEntity.status(HttpStatus.OK).body(cursoRepository.findAll());
     }
 
     @GetMapping("/{id}")

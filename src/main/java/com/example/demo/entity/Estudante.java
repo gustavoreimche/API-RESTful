@@ -4,8 +4,11 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -39,5 +42,6 @@ public class Estudante {
     private Set<Livro> livros = new HashSet();
 
     @OneToMany(mappedBy = "estudante")
+    @JsonIgnore
     private Set<AvaliacaoCurso> avaliacaoCursos;
 }

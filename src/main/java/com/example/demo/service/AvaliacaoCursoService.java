@@ -30,7 +30,7 @@ public class AvaliacaoCursoService {
 
         Optional<Curso> cursoOpt = cursoRepository.findByNomeCurso(nomeCurso);
         if(!cursoOpt.isPresent()){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Estudante não encontrado!");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Curso não encontrado!");
         }
 
         AvaliacaoCurso avaliacaoCurso = new AvaliacaoCurso();
