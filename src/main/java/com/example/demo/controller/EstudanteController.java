@@ -35,7 +35,7 @@ public class EstudanteController {
         return estudanteService.buscarEstudantePorId(id);
     }
 
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = {"Access-Control-Allow-Origin: *","Access-Control-Allow-Credentials"})
     @GetMapping
     public ResponseEntity<List<Estudante>> buscarEstudantes() {
         return estudanteService.buscarEstudantes();
