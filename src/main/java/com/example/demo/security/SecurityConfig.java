@@ -57,13 +57,4 @@ public class SecurityConfig {
         return jwtDecoder;
     }
 
-    @Bean
-	CorsConfigurationSource corsConfigurationSource() {
-		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOrigins(Arrays.asList("file:///D:/OneDrive/Projetos%20Programa%C3%A7%C3%A3o/B7Web/Teste/index.html"));
-		configuration.setAllowedMethods(Arrays.asList("GET","POST", "PUT", "DELETE"));
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("/**", configuration);
-		return source;
-	}
 }
